@@ -1,0 +1,34 @@
+---
+- name: Provision baseline configs
+  hosts: all
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: OBTAIN LOGIN CREDENTIALS
+    include_vars: creds.yaml
+
+- name: Provision PE router baseline configs
+  hosts: pe_vsrx
+  connection: local
+  gather_facts: no
+  roles:
+    - baseline
+    - pe_router
+
+- name: Provision P router baseline configs
+  hosts: p_vsrx
+  connection: local
+  gather_facts: no
+  roles:
+    - baseline
+    - p_router
+
+- name: Provision PE router baseline configs
+  hosts: ce_vsrx
+  connection: local
+  gather_facts: no
+  roles:
+    - baseline
+    - ce_router
+

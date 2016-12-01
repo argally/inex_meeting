@@ -1,0 +1,6 @@
+---
+- name: CE Junos build
+  junos_template:
+      provider: "{{ credential }}"
+      src: "ce_vsrx.conf"
+      action : overwrite

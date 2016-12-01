@@ -1,0 +1,13 @@
+host:
+    name : vsrx5-ce5
+    loopback:
+        ip: 5.5.5.5
+        iso: 49.0002.0045.0500.5005.00
+    ce_bgp_asn: 65100
+
+interfaces:
+  - name: ge-0/0/1
+    description: Link to vsrx3-pe3
+    ip: 10.3.5.1
+    peer: 10.3.5.0
+    mask: 31

@@ -1,0 +1,13 @@
+host:
+    name : vsrx6-ce6
+    loopback:
+        ip: 6.6.6.6
+        iso: 49.0002.0060.0600.6006.00
+    ce_bgp_asn: 65200
+
+interfaces:
+  - name: ge-0/0/1
+    description: Link to vsrx4-pe4
+    ip: 10.4.6.1
+    peer: 10.4.6.0
+    mask: 31

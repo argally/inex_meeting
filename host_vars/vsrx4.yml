@@ -1,0 +1,24 @@
+host:
+    name : vsrx4-pe4
+    loopback:
+        ip: 4.4.4.4
+        iso: 49.0002.0040.0400.4004.00
+    peer_loopback: 3.3.3.3
+    ce_peer_bgp_asn: 65200
+
+interfaces:
+  - name: ge-0/0/1
+    description: Link to vsrx1-p1
+    ip: 10.1.4.1
+    peer: 10.1.4.0
+    mask: 31
+  - name: ge-0/0/2
+    description: Link to vsrx2-p2
+    ip: 10.2.4.1
+    peer: 10.2.4.0
+    mask: 31
+  - name: ge-0/0/3
+    description: Link to vyos5-ce6
+    ip: 10.4.6.0
+    peer: 10.4.6.1
+    mask: 31

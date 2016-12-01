@@ -1,0 +1,6 @@
+---
+- name: PE Junos build
+  junos_template:
+      provider: "{{ credential }}"
+      src: "pe_vsrx.conf"
+      action : overwrite

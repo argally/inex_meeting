@@ -1,0 +1,6 @@
+---
+- name: Baseline Junos build
+  junos_template:
+      provider: "{{ credential }}"
+      src: "vsrx.conf"
+      action : overwrite

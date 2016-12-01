@@ -1,0 +1,24 @@
+host:
+    name: vsrx3-pe3
+    loopback:
+        ip: 3.3.3.3
+        iso: 49.0002.0030.0300.3003.00
+    peer_loopback: 4.4.4.4
+    ce_peer_bgp_asn: 65100
+
+interfaces:
+  - name: ge-0/0/1
+    description: Link to vsrx1-p1
+    ip: 10.1.3.1
+    peer: 10.1.3.0
+    mask: 31
+  - name: ge-0/0/2
+    description: Link to vsrx2-p2
+    ip: 10.2.3.1
+    peer: 10.2.3.0
+    mask: 31
+  - name: ge-0/0/3
+    description: Link to vyos5-ce5
+    ip: 10.3.5.0
+    peer: 10.3.5.1
+    mask: 31
